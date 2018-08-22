@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" class="row">
+  
+  <h4 class="col-md-2 project-tittle">Resource Managment System</h4>
+
+<div class="col-md-10 header-menu">
+
+<button mat-icon-button [matMenuTriggerFor]="menu" >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+    <mat-icon>dialpad</mat-icon>
+    <span>Menu 1</span>
+  </button>
+    <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Menu 2</span>
+  </button>
+    <button mat-menu-item>
+    <mat-icon>notifications_off</mat-icon>
+    <span>Menu 3</span>
+  </button>
+  </mat-menu>
+</div>
+
+</mat-toolbar>

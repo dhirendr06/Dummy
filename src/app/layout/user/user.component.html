@@ -1,0 +1,108 @@
+<div class="container-fluid">
+  <mat-drawer-container class="example-container row" autosize>
+
+
+    <mat-drawer #drawer opened="true" class="example-sidenav col-md-2" mode="side">
+
+
+      <div class="profile-card ">
+        <div class="example-header-image ">
+          <img mat-card-image src="../../../../../assets/images/avatar.png" alt="Photo of a Shiba Inu">
+        </div>
+      </div>
+      <mat-card-header class="text-center mat-profile-card-header">
+
+
+        <mat-card-title>Vishal Sinha</mat-card-title>
+
+
+
+
+      </mat-card-header>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+                                              Show Information
+                                            </button>
+
+
+      <mat-card-content>
+
+        <span *ngIf="showFiller">
+                        IRM:-
+                        </span>
+        <span *ngIf="showFiller">
+                        USER 1
+                        </span>
+      </mat-card-content>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Personal data
+            </mat-panel-title>
+
+          </mat-expansion-panel-header>
+          <p> IRM:- USER 1</p>
+
+        </mat-expansion-panel>
+        <mat-list class="nav-box">
+          <mat-list-item routerLink="/example" routerLinkActive="active"> Example</mat-list-item>
+          <mat-list-item routerLink="/home" routerLinkActive="active"> Dashboard </mat-list-item>
+        </mat-list>
+
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Admin
+            </mat-panel-title>
+
+          </mat-expansion-panel-header>
+          <mat-list>
+
+            <mat-list-item routerLink="/resources" routerLinkActive="active"> Resources</mat-list-item>
+            <mat-list-item routerLink="/projects" routerLinkActive="active"> Projects</mat-list-item>
+            <mat-list-item routerLink="/coustomers" routerLinkActive="active"> Coustomers</mat-list-item>
+
+          </mat-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Reports
+            </mat-panel-title>
+
+          </mat-expansion-panel-header>
+          <mat-list>
+
+            <mat-list-item routerLink="/reports" routerLinkActive="active">Java Reports</mat-list-item>
+            <mat-list-item> Paprika </mat-list-item>
+          </mat-list>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+
+
+
+
+
+    </mat-drawer>
+
+    <mat-drawer-content class="col-md-10">
+      <div class="example-sidenav-content ">
+        <button type="button" class="toggle-nav" mat-button (click)="drawer.toggle(); open1()">
+                            <i class="material-icons">reorder</i>
+                            </button>
+      </div>
+
+
+
+
+      <router-outlet></router-outlet>
+
+    </mat-drawer-content>
+
+
+  </mat-drawer-container>
+
+
+
+</div>

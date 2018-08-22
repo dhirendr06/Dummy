@@ -1,0 +1,44 @@
+<app-example-header>
+
+</app-example-header>
+<div class="container-fluid">
+          <mat-drawer-container class="example-container row" autosize >
+          
+
+                      <mat-drawer #drawer  opened="true" class="example-sidenav col-md-2" mode="side" >
+                       
+                        <p>Auto-resizing sidenav</p>
+                         <button (click)="showFiller = !showFiller" mat-raised-button>
+                          Toggle extra text
+                        </button>
+                        <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+                        
+
+                        <mat-list>
+                              <mat-list-item routerLink="/example-table" routerLinkActive="active"> Table </mat-list-item>
+                             <mat-list-item routerLink="/designation" routerLinkActive="active"> Designation </mat-list-item>
+                              <mat-list-item  routerLink="/example-forms" routerLinkActive="active"> Form</mat-list-item>
+                              <mat-list-item> Paprika </mat-list-item>
+                         </mat-list>
+                      </mat-drawer>
+
+
+              
+            <div class="example-sidenav-content col-md-10" >
+              <button type="button" class="toggle-nav" mat-button (click)="drawer.toggle()">
+               <i class="material-icons">reorder</i>
+              </button>
+            </div>
+                  
+            
+
+            <router-outlet></router-outlet>
+            
+
+          
+
+          </mat-drawer-container>
+
+
+
+  </div>

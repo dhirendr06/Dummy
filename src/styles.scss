@@ -1,0 +1,221 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+$primary-focus-color: #24b3c9;
+$mediumgray:#6E6E6E;
+ $darkgray:#525252;
+*:focus {
+  outline: -webkit-focus-ring-color auto 0px !important;
+}
+
+.margin-top-15 {
+  margin-top: 15px !important;
+}
+
+.full-width {
+  margin: 0;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+mat-drawer-container {
+  height: 598px;
+}
+
+// mat-drawer{
+// display: block !important;
+// visibility: visible !important;
+// }
+.mat-toolbar.mat-primary,
+  {
+  background: #148a9c !important;
+}
+
+.mat-focused {
+  .mat-input-element {
+    caret-color: white !important;
+  }
+  .mat-form-field-label {
+    color: white !important;
+  }
+  .mat-form-field-ripple {
+    background-color: $primary-focus-color !important;
+  }
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled),
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow,
+.mat-datepicker-toggle-active {
+  color: $primary-focus-color !important;
+}
+
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-radio-button.mat-accent .mat-radio-inner-circle,
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+.mat-calendar-body-selected,
+.mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus,
+.mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus,
+.mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus,
+.mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus {
+  background-color: $primary-focus-color !important;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  // background-color: $primary-focus-color !important;
+  background-color: #148a9c !important;
+}
+
+.project-tittle {
+  //  background-color: white;
+  color: white;
+  padding-left: 9px;
+  line-height: 4;
+  height: 64px;
+  margin-left: -13px !important;
+  font-size: 15px !important;
+  line-height: 4 !important;
+}
+
+.header-menu {
+  text-align: right;
+}
+
+.toggle-nav {
+  margin-left: -10px !important; // background-color: white;
+  background-color: #424242;
+  min-width: 35px !important;
+}
+
+.example-card-header-image {
+  background-color: rgba(0, 0, 0, 0.18);
+  border-radius: 50%;
+  .material-icons {
+    margin: 25%;
+  }
+}
+
+.mat-card-header-text {
+  margin: 0 !important;
+}
+
+app-dashboard {
+  position: initial !important;
+}
+
+.profile-card {
+  border-radius: 50%;
+  height: 127px;
+  margin: 0 auto;
+  width: 50%;
+  .example-header-image {
+    img {
+      border-radius: 64%;
+      box-shadow: 0px 0px 18px 5px #888888;
+      margin-left: 14%;
+      margin-top: 35%;
+      width: 70%;
+    }
+  }
+}
+
+.mat-profile-card-header {
+  .mat-card-header-text {
+    margin: 0 auto !important;
+  }
+}
+
+.nav-box {
+  mat-list-item {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  }
+}
+
+.example-table {
+  margin: 0 auto;
+}
+
+/* Structure */
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.example-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.table-height {
+  height: 400px;
+  overflow: scroll;
+}
+
+.mat-column-select {
+  overflow: visible;
+}
+
+.mat-column-select {
+  overflow: initial;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 400px !important;
+}
+
+.mat-tab-header {
+  position: absolute !important;
+  width: 91% !important;
+  top: -37px  !important;
+  left: 48px !important;
+}
+
+// scrollbar
+*::-webkit-scrollbar,
+body::-webkit-scrollbar,
+mat-sidenav.sidenav::-webkit-scrollbar,
+.mat-sidenav-content::-webkit-scrollbar,
+mat-drawer::-webkit-scrollbar,
+mat-drawer-content::-webkit-scrollbar,
+.mat-table::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+*::-webkit-scrollbar-trac,
+body::-webkit-scrollbar-track,
+mat-sidenav.sidenav::-webkit-scrollbar-trac,
+.mat-sidenav-content::-webkit-scrollbar-trac,
+mat-drawer::-webkit-scrollbar-trac,
+mat-drawer-content::-webkit-scrollbar-trac,
+.mat-table::-webkit-scrollbar {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+*::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+mat-sidenav.sidenav::-webkit-scrollbar-thumb,
+.mat-sidenav-content::-webkit-scrollbar-thumb,
+mat-drawer::-webkit-scrollbar-thumb,
+mat-drawer-content::-webkit-scrollbar-thumb,
+.mat-table::-webkit-scrollbar {
+  background-color: $mediumgray;
+  outline: 1px solid $darkgray;
+}
